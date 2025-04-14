@@ -1,0 +1,134 @@
+/* Custom CSS */
+
+/* General Styles */
+:root {
+    --primary-color: #0d6efd;
+    --secondary-color: #6c757d;
+    --dark-color: #212529;
+    --light-color: #f8f9fa;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    color: #333;
+    scroll-behavior: smooth;
+    overflow-x: hidden;
+}
+
+section {
+    padding: 80px 0;
+}
+
+.section-title {
+    font-weight: 700;
+    color: var(--dark-color);
+    position: relative;
+}
+
+.divider {
+    width: 80px;
+    height: 4px;
+    background-color: var(--primary-color);
+    margin-top: 20px;
+    margin-bottom: 30px;
+}
+
+/* Hero Section */
+.hero-section {
+    height: 100vh;
+    background-color: var(--light-color);
+    padding-top: 80px; /* Adjusted to account for fixed navbar */
+    color: var(--dark-color);
+}
+
+.profile-img {
+    max-width: 50px;
+    height: auto;
+    border: 8px solid rgba(13, 110, 253, 0.1);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    border-radius: 15px;
+}
+
+/* Timeline for Education */
+.timeline {
+    position: relative;
+    padding-left: 30px;
+}
+
+.timeline:before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 4px;
+    background-color: var(--primary-color);
+}
+
+.timeline-item {
+    position: relative;
+}
+
+.timeline-item:before {
+    content: '';
+    position: absolute;
+    left: -38px;
+    top: 20px;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background-color: white;
+    border: 4px solid var(--primary-color);
+    z-index: 1;
+}
+
+/* Projects */
+.card {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    border: none;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+}
+
+.card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+}
+
+/* Contact */
+.social-icons a {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-color: #f8f9fa;
+    transition: all 0.3s ease;
+}
+
+.social-icons a:hover {
+    transform: translateY(-5px);
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+    .hero-section {
+        height: auto;
+        padding: 120px 0 60px;
+    }
+    
+    .profile-img {
+        margin-top: 40px;
+        max-width: 250px;
+    }
+    
+    .timeline {
+        padding-left: 20px;
+    }
+    
+    .timeline-item:before {
+        left: -28px;
+        width: 16px;
+        height: 16px;
+    }
+}
